@@ -5,9 +5,45 @@
     <meta name="viewport" content="width=、, initial-scale=1.0">
     <meta name="description" content="高级选择器">
     <title>Document</title>
-    
+    <style type="text/css">
+        /* 后代选择器 */
+        /* 表示 class="div" 下的所有 p */
+        .div p{
+            color: red;
+        }
+        /* 子代选择器 作用不大*/
+        div>p{
+            color:yellow
+        }
+        /* 交集选择器 */
+        h3.special{
+            color:red;
+        }
+        /* 序选择器 */
+        ul li:first-child{
+            color: red;
+        }
+        /* 兄弟选择器 */
+        h3+p{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="div">
+        <p>后代选择器测试1</p>
+    </div>
+    <p>后代选择器测试2</p>
+    <!--交集选择器-->
+    <h3 class="special zhongyao">标题</h3>
+    <h3 class="special">我也是标题</h3>
+    <h3>我是段落</h3>
+    <ul>
+        <li>first child</li>
+        <li>second child</li>
+        <li>third child</li>
+    </ul>
+    <h3>我是h3 </h3>
+    <p>我是和的兄弟p</p>
 </body>
 </html>
