@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/a.css" type="text/css" title="第一种样式"></link>
+    <link rel="stylesheet" href="../../css/b.css" type="text/css" title="第二种样式">
+    <style type="text/css">
+        #mytitle{
+            color:black
+        }
+        .one{           /*类选择器*/
+            width : 800px;
+        }
+        .two{
+            height: 50px;
+        }
+        /* 通配符 不建议使用 */
+        *{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!--标签选择-->
+    <p>Are You OK?</p>
+    <p>Hello</p>
+    <p>Thank You</p>
+    <!--id 选择 会同时被id 和 标签选择 -->
+    <p id="mytitle">Thank You Vary Much</p>
+    <!--多个类选择器使用空格-->
+    <p class="one two">测试类选择器</p> 
+
+</body>
+</html>

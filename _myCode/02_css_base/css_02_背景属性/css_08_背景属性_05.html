@@ -23,12 +23,29 @@
                     200px at 100px 100px,
                     rgba(0, 0, 0, 0),
                     rgba(0, 0, 0, 0.5)
-            );
+            )
         }
+        .div1 {
+            width: 320px;
+            height: 320px;
+            border: 1px solid red;
+            background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
+            background-size: cover;
+
+            /* 裁剪出圆形区域 */
+            clip-path: circle(50px at 100px 100px);
+            transition: clip-path .4s;
+        }
+        .div1:hover{
+            /* 鼠标悬停时，裁剪出更大的圆形 */
+            clip-path: circle(80px at 100px 100px);
+        };
     </style>
 </head>
 <body>
 <div></div>
 <div></div>
+<br><br><br>
+<div class="div1"></div>
 </body>
 </html>
