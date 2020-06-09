@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        var a = "abcde";
+        var b = "你好";
+        var c = '我好';
+        var d = "12345";
+        var e = "";
+
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);      //全是string 说明' " 效果相同
+
+        console.log(a.length);      // 5
+        console.log(b.length);      // 汉字也算一个长度 2
+
+        var x = 100;
+        var y = 12.3;
+        console.log(typeof x);      // number
+        console.log(typeof(y));     // mumber
+
+        console.log( 0.1 + 0.2);    // 0.30000000000000004
+
+        console.log( "4" + 2 );     //    42
+        console.log( "4" - 2 );     //  2 (- * % / 等会隐式转换)
+        console.log( "4" + 3 - 2 ); // 41 
+
+
+
+
+    </script>
+</body>
+</html>
