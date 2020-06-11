@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        var str="abcdefghiabee"
+        console.log(str.indexOf("a"));
+        console.log(str.lastIndexOf("a"));
+        console.log(str.indexOf("a",0));        //从0位置开始查找 a
+
+        var r1 = String.fromCharCode(72);
+        var r2 = String.fromCharCode(20013);
+        console.log(r1);        // H
+        console.log(r2);        // 中
+
+        // 返回输入字符串所占字符数
+        var str = prompt("请输入字符串");
+        var count = getLength(str);
+        alert("str length is " + count);
+        // 英文占一个字符，否则两个
+        function getLength(string) {
+            var count = 0;
+            for(var i=0; i<string.length; i++){
+                // 0 - 127 字母 
+                if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >=0) {
+                    count++;
+                } else {
+                    count += 2;
+                }
+            }
+            return count;
+        }
+    </script>
+</body>
+</html>
