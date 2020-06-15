@@ -23,6 +23,24 @@
         var arr = str.split(":");
         console.log(arr);
         console.log(arr[0]);
+
+        // replace() 替换
+
+        var str2 = "Today is fine day,today is fine day !!!"
+        console.log(str2);
+        console.log(str2.replace("today","tomorrow"));  //只能替换第一个today
+        console.log(str2.replace(/today/gi,"tomorrow")); //这里用到了正则，才能替换所有的today
+        
+        // html
+        console.log("--html--");
+        var str = "你好";
+
+        console.log(str.anchor())
+        console.log(str.big())
+        console.log(str.sub())
+        console.log(str.sup())
+        console.log(str.link("http://www.baidu.com"));
+        console.log(str.bold())
     </script>
 </body>
 </html>

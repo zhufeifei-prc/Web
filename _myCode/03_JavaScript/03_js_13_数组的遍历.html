@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组遍历</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // for 
+        var arr = [1,2,3];
+        for(var i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+        // forEach
+        // - 第一个参数，就是当前正在遍历的元素
+        // - 第二个参数，就是当前正在遍历的元素的索引
+        // - 第三个参数，就是正在遍历的数组
+        var arr = ["王一", "王二", "王三"];
+        arr.forEach(function(item, index, obj) {
+            console.log("item:" + item);    // 王一 王二 王三
+            console.log("index:" + index);  //  0    1    2
+            console.log("obj:" + obj);      // 王一,王二,王三
+            console.log("----------");
+        }); 
+        // map 
+        var arr = [1,11,21];
+        var arr2 = arr.map(function(item, index) {
+            return item + 10;
+        });
+        console.log(JSON.stringify(arr2));  // 11 21 31
+        // map 的另一个用法
+        // 用于存储 arr1 的需要使用的属性到arr2 
+        const arr1 = [{name:'王一珺',sex:'女'},{name:'朱飞飞',sex:'男'}];
+        // 解读：
+        // arr4 等于： arr1传各个item   item传进来后要item.name 
+        const arr4 = arr1.map(item => item.name);
+        console.log(JSON.stringify(arr4));
+        // 解读：
+        // arr5 等于： arr1传各个item   item传进来后要item.name item.sex
+        const arr5 = arr1.map(item => ({
+            myName : item.name,
+            mySex : item.sex
+        }));
+        console.log(JSON.stringify(arr5));
+        // filter 过滤 回调函数返回true 过滤， 否则 不过滤
+        var arr6 = [1, 3, 6, 2, 5, 6];
+        var arr7 = arr6.filter(function(item, index) {
+            return item > 4; //将arr1中大于4的元素返回，组成新的数组
+        });
+        console.log(JSON.stringify(arr7));  // [6,5,6]
+        // 等价于    
+        arr8 = arr6.filter(item => item > 4);    
+        console.log(JSON.stringify(arr8));
+
+        // every() 判断数组中所有值均满足回调函数 如有不满足的，停止遍历 
+        var arr9 = [1,2,7,8,9,10];
+        var bool1 = arr9.every(function (element,index,array){
+            if(element < 10){
+                return true;
+            } else{
+                return false;
+            } 
+        });
+        console.log(bool1);
+        // some() 与上面正好相反
+
+        // reduce() 
+        // ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+        // 求和
+        var arr = [2, 0, 1, 9, 6];
+        sumValue = arr.reduce(function(total, item, index, array) { //  计算 arr 数组中，所有元素项的综合
+            //console.log("total = " + total + " " + "item = " + item);
+            // total = 0 item = 2
+            // total = 2 item = 0
+            // total = 2 item = 1
+            // total = 3 item = 9
+            // total = 12 item = 6
+            return total + item;
+        }, 0);  // 初始值为0 即 total=0
+        console.log('sumValue:' + sumValue); // 打印结果：18
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // "smyhvaevaesmyh"查找字符串中所有m出现的位置。
+        var str = "smyhvaevaesmyh";
+        for(var i=0; i<str.length; i++){
+            if (str[i] == 'm') {
+                console.log(i);
+            }
+        }
+        //判断一个字符串中出现次数最多的字符，统计这个次数
+        var json={};
+        var str = "smyhvaevaesmyh";
+        for(var i=1; i<str.length; i++){
+            if (json[str[i]] == undefined){
+                json[str[i]] = 1;
+            }else{
+                json[str[i]] += 1;
+            }
+        }
+        console.log(json);
+        console.log(typeof json);
+        var maxKey = "";
+        var maxValue = 0;
+        for(var k in json){
+            if(json[k] > maxValue){
+                maxKey = k;
+                maxValue = json[k];
+            }
+        }
+        console.log(maxKey + ":" + maxValue);
+
+
+
+
+    </script>
+</body>
+</html>

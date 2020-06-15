@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/JavaScript">
+        let dataList = [
+                {
+                    title: '品牌鞋子，高品质低价入手',
+                    publishTime: 200,
+                },
+                {
+                    title: '不是很贵，但是很暖',
+                    publishTime: 100,
+                },
+                {
+                    title: '无法拒绝的美食，跟我一起吃吃',
+                    publishTime: 300,
+                },
+            ];
+        console.log("排序前" + JSON.stringify(dataList));
+        dataList.sort(function(a,b) {
+            return parseInt(a.publishTime) - parseInt(b.publishTime);
+        });
+        console.log("排序后" + JSON.stringify(dataList));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/JavaScript">
+        let arr = [5, 3, 2, 9, 7, 6];
+        let result = arr.find(function (item, index) {
+            return item > 4; //遍历数组arr，一旦发现有第一个元素大于4，就把这个元素返回
+        });                 // find 修改为findIndex 则返回的是0 （5的下标）
+        console.log(result);  //打印结果：5
+
+        
+    </script>
+</body>
+</html>
