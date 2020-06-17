@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // var obj = new Object();
+        var obj = {};
+        obj.name = "孙悟空";
+        obj.gender = "男";
+        obj.age = 18;
+        console.log(JSON.stringify(obj)); // {"name":"孙悟空","gender":"男","age":18}
+        console.log(obj.age);   //  18
+        console.log(obj['age']);    // 18 
+        // 删除
+        delete obj.age;
+        // in 运算符
+        console.log("name" in obj); // true
+        console.log("age" in obj);     // false
+        // 遍历
+        console.log("----------遍历---------");
+        for (var key in obj){
+            console.log(obj.key);
+            console.log("key : " + key +", value : " + obj[key]);   // obj[key] 的灵活性        }
+        }
+   </script>
+</body>
+</html>

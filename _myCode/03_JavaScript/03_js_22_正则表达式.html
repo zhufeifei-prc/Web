@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // 一  对象的方式
+        // 单参数
+        var reg = new RegExp("a");  //是否含有a
+        console.log(reg.test("helloworld"));    // false
+        console.log(reg.test("hello a world")); // true
+        // 双参数
+        var reg1 = new RegExp("A", "i") // i : 忽略大小写
+        console.log(reg1.test("helloworld"));   // false
+        console.log(reg1.test("hello a world"));    // true
+
+        // 二 字面量
+        var reg3 = /A/i; // 检查是否含有A / a 
+        var str = "qiangu";
+        console.log(reg3.test(str));    // true
+    </script>
+</body>
+</html>
