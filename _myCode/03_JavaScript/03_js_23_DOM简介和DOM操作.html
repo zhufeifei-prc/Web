@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../img/desktop.jpg" class="image-box" title="图片" alt="桌面" id="aa">
+    <script>
+    // var div1 = document.getElementById("box1"); //方式一：通过 id 获取 一个 元素节点（为什么是一个呢？因为 id 是唯一的）
+    // var arr1 = document.getElementsByTagName("div"); //方式二：通过 标签名 获取 元素节点数组，所以有s
+    // var arr2 = document.getElementsByClassName("hehe"); //方式三：通过 类名 获取 元素节点数组，所以有s
+        var a1 = document.createElement("li"); 
+        var a2 = document.createElement("adbc");
+        console.log(a1);    // <li></li>
+        console.log(a2);    // <adbc></adbc>
+
+    // 创建完节点，插入的方法：
+    // 父节点.appendChild(a1);
+    // 父节点.insertBefore(a1,作为参考的子节点);
+
+    // 删除节点
+        // 父节点.removeChild(子节点);
+        // 删除自己
+        //node1.parentNode.removeChild(node1);
+    // 克隆节点
+    // node.cloneNode(false);
+    // node.cloneNode(true);   // 克隆子节点
+    
+    // --------------------------
+    // 节点属性获取
+        var myNode = document.getElementsByTagName("img")[0];
+        console.log(myNode.src);
+        console.log(myNode.alt);
+        console.log(myNode.title);
+        console.log(myNode.className);
+    // 节点属性获取2
+        console.log(myNode["src"]);
+        console.log(myNode["alt"]);
+        console.log(myNode["title"]);
+        console.log(myNode["className"]);
+    // 节点属性获取3
+        console.log(myNode.getAttribute("src"));
+    // -----------------------------
+    // 节点属性设置自己体会
+    // -----------------------------
+    // 删除节点的属性
+       myNode.removeAttribute("src");
+
+
+
+    </script>
+</body>
+</html>
