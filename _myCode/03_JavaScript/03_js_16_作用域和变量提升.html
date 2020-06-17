@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        var a = 'aaa';
+        var c;
+        foo();
+        console.log('a = ' + a);    // a = 'aaa'
+        //console.log('b = ' + b); // Uncaught ReferenceError: b is not defined
+        console.log('c = ' + c);    // c = 'ccc'
+        foo2();
+        console.log("global a: " + a);  // aaa
+        
+        function foo() {
+            var b = 'bbb';
+            console.log(a); // 'aaa'
+            console.log(b); // 'bbb'
+            c = 'ccc';
+        }
+        function foo2() {
+            var a = 'a222';
+            console.log("foo2 a: " + a);    // a222
+            console.log("global a in foo2 :" + window.a);  //使用全局变量
+        }
+
+
+    </script>
+</body>
+</html>
