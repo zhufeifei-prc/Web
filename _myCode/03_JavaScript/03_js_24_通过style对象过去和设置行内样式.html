@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 6px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" style="width: 200px; height: 100px;
+        background-color: pink;"></div>
+    <script>
+        var box1 = document.getElementsByTagName("div")[0];
+
+        console.log(box1.style.backgroundColor); // pink
+        console.log(box1.style.border);     // 非行内样式，打印不出来 
+        console.log(box1.style);    //
+    </script>
+
+</body>
+</html>

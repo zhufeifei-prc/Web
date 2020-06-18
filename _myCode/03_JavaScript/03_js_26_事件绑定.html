@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+</head>
+<body>
+    
+    <!-- <button>按钮</button> -->
+    <script>
+        // 1 element.onclick = function(){}
+        // 2 element.addEventListener('click',function(){},false);
+        // 参数3：**true表示捕获阶段触发，false表示冒泡阶段触发（默认）**。如果不写，则默认为false。【重要】
+        var btn1 = document.getElementsByTagName("button")[0];
+        btn1.addEventListener('click',foo1);
+        btn1.addEventListener('click',foo2);
+        // foo1 foo2 均会执行
+        // 这就是addEventListener 的优点，而 onclick 的写法则会覆盖。
+        // IE8 一下则不行，需要使用 btn.attachEvent('onclick',function(){});
+
+        function foo1(){
+            alert(1);
+        }
+        function foo2(){
+            alert(2);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 入口函数</title>
+</head>
+<body>
+    <script src="../src/jquery-1.11.3/jquery-1.11.3.js"></script>
+    <script type="text/JavaScript">
+    // 文档加载完毕，图片未加载的时候，就会执行这个函数
+        $(document).ready(function () {
+            alert(1);
+        })
+    // 文档加载完毕，图片未加载的时候，就会执行这个函数 上面版本的简写
+        $(function () {
+            alert(2);
+        })
+    // 文档和图片都加载完之后
+        $(window).ready(function () {
+            alert(3);
+        })
+    </script>
+</body>
+</html>
