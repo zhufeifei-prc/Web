@@ -25,12 +25,7 @@
 
     //设置多个样式：  css(json);
 	 $("div").css({"width":100,"height":100,"background-color":"pink"});
-
-
-
 ```
-
-
 **2、获取样式：**
 
 ```javascript

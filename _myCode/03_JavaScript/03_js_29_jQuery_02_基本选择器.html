@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div class="box"></div>
+    <div id="box"></div>
+    <div class="box"></div>
+    <div></div>
+
+    <script src="../src/jquery-1.11.3/jquery-1.11.3.js"></script>
+    <script>
+        console.log($);
+        console.log(jQuery);
+        console.log($ === jQuery);
+        // $的使用
+        // $(document).ready(function (){})
+        // $("div")  所有div标签元素
+        // $(".div") 所有class=div 的元素
+        // $("#btnShow")  id 为 btnShow 的元素
+        // 原生js 操作
+        var myBox = document.getElementById("box");
+        var boxArr = document.getElementsByClassName("box");
+        var divArr = document.getElementsByTagName("div");
+        // DOM => jQuery
+        var myBox = $("#box");
+        var boxArr = $(".box"); // class = box 的元素
+        var divArr = $("div");
+        // jQuery => DOM
+        box1 = boxArr[0];
+        box2 = boxArr.get(1);
+        console.log(box1);
+        console.log(box2);
+        divArr.css("width",100);
+        divArr.css("height",100);
+        divArr.css("margin",10);
+        divArr.css("background","pink");
+
+        boxArr.css("backgroud","red");
+        myBox.css("background","yellow");
+        // 
+
+    </script>
+</body>
+</html>

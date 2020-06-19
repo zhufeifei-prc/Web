@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../src/jquery-1.11.3/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function (){
+            // 奇
+            $("li:odd").css("background","red");
+            // 偶
+            $("li:even").css("background","green");
+            //index
+            $("ul li:eq(3)").css("font-size","30px");
+        });
+        // 属性选择器
+        console.log($("a[href]"));
+        console.log($("a[href='www.baidu.com']"));
+    </script>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+    <a href="http://www.baidu.com" target="_blank">百度</a>
+</body>
+</html>

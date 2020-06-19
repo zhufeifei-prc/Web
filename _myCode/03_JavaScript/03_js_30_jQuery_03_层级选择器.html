@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../src/jquery-1.11.3/jquery-1.11.3.js"></script>
+    <script type="text/JavaScript">
+        $(document).ready(function (){
+            // 后代  ul 下所有的 li
+            var jqLi = $("ul li");
+            jqLi.css("margin",5);
+            jqLi.css("background","pink");
+            // 子代：亲儿子
+            var jqOtherLi = $("ul>li");
+            jqOtherLi.css("background","red");
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <ol>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ol>
+</ul>
+</body>
+</html>
