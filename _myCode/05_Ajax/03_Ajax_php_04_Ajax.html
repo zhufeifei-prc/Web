@@ -1,0 +1,31 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ajax 发送 get 请求 </h1>
+    <input type="button" value="发送get_ajax请求" id="btnAjax">
+    <script type="text/JavaScript">
+        document.querySelector('#btnAjax').onclick = function (){
+            // Ajax
+            //  1 new
+            var ajaxObj = new XMLHttpRequest();
+            //  2 设置参数
+            ajaxObj.open('get', 'http://localhost:8080/04_ajax.php');
+            //  3 发送请求
+            ajaxObj.send();
+            //  4 注册事件
+            ajaxObj.onreadystatechange = function (){
+                if(ajaxObj.readyState == 4 && ajaxObj.state ==200 ){
+                    console.log('数据获取成功');
+                    //  5 获取
+                    console.log(ajaxObj.responseText);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
